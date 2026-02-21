@@ -1,0 +1,35 @@
+emp_id,name,email,department,designation
+W1001,Ramesh Kumar Patil,ramesh.patil@mc.gov.in,WATER,Junior Engineer
+W1002,Suresh Vijay Kulkarni,suresh.kulkarni@mc.gov.in,WATER,Senior Engineer
+W1003,Anita Deepak Sharma,anita.sharma@mc.gov.in,WATER,Supervisor
+W1004,Prakash Mohan Deshmukh,prakash.deshmukh@mc.gov.in,WATER,Inspector
+W1005,Rajesh Naresh Jadhav,rajesh.jadhav@mc.gov.in,WATER,Technician
+W1006,Priya Anil Bhosale,priya.bhosale@mc.gov.in,WATER,Assistant Engineer
+W1007,Mahesh Dinesh Pawar,mahesh.pawar@mc.gov.in,WATER,Field Officer
+W1008,Sunita Ganesh More,sunita.more@mc.gov.in,WATER,Junior Inspector
+R2001,Amit Sunil Kale,amit.kale@mc.gov.in,ROAD,Chief Engineer
+R2002,Vinod Raju Shinde,vinod.shinde@mc.gov.in,ROAD,Senior Engineer
+R2003,Kavita Ashok Rane,kavita.rane@mc.gov.in,ROAD,Junior Engineer
+R2004,Santosh Pandit Gaikwad,santosh.gaikwad@mc.gov.in,ROAD,Supervisor
+R2005,Deepak Balu Kamble,deepak.kamble@mc.gov.in,ROAD,Inspector
+R2006,Mangesh Datta Sawant,mangesh.sawant@mc.gov.in,ROAD,Road Supervisor
+R2007,Vandana Sanjay Mane,vandana.mane@mc.gov.in,ROAD,Assistant Engineer
+R2008,Sachin Vijay Patil,sachin.patil@mc.gov.in,ROAD,Field Engineer
+R2009,Rekha Mohan Thorat,rekha.thorat@mc.gov.in,ROAD,Quality Inspector
+S3001,Dilip Ramesh Chavan,dilip.chavan@mc.gov.in,SANITATION,Sanitation Officer
+S3002,Nanda Prakash Parab,nanda.parab@mc.gov.in,SANITATION,Senior Inspector
+S3003,Ashok Kumar Naik,ashok.naik@mc.gov.in,SANITATION,Supervisor
+S3004,Smita Rajendra Dalvi,smita.dalvi@mc.gov.in,SANITATION,Junior Inspector
+S3005,Balaji Dattatray Khot,balaji.khot@mc.gov.in,SANITATION,Field Supervisor
+S3006,Meena Suresh Pawar,meena.pawar@mc.gov.in,SANITATION,Sanitation Inspector
+S3007,Ganesh Shankar Shelke,ganesh.shelke@mc.gov.in,SANITATION,Assistant Officer
+S3008,Puja Arun Shirke,puja.shirke@mc.gov.in,SANITATION,Health Inspector
+L4001,Vikas Ramchandra Rathod,vikas.rathod@mc.gov.in,STREET_LIGHT,Electrical Engineer
+L4002,Sunil Baban Desai,sunil.desai@mc.gov.in,STREET_LIGHT,Senior Technician
+L4003,Madhavi Chandrakant Joshi,madhavi.joshi@mc.gov.in,STREET_LIGHT,Junior Technician
+L4004,Yogesh Vinayak Mahajan,yogesh.mahajan@mc.gov.in,STREET_LIGHT,Lighting Supervisor
+L4005,Pallavi Nitin Bhoir,pallavi.bhoir@mc.gov.in,STREET_LIGHT,Maintenance Inspector
+L4006,Avinash Sudhir Kadam,avinash.kadam@mc.gov.in,STREET_LIGHT,Field Technician
+L4007,Shweta Rajesh Potdar,shweta.potdar@mc.gov.in,STREET_LIGHT,Assistant Engineer
+L4008,Ravindra Mohan Jagtap,ravindra.jagtap@mc.gov.in,STREET_LIGHT,Electrical Inspector
+L4009,Sapna Vasant Nikam,sapna.nikam@mc.gov.in,STREET_LIGHT,Junior Supervisor
