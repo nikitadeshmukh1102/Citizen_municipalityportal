@@ -15,7 +15,8 @@ const CitizenLayout = () => {
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
 
           {/* LEFT → LOGO + NAME */}
-          <div className="flex items-center gap-3">
+         <div className="flex flex-wrap items-center gap-3">
+
             {logo && (
               <img
                 src={logo}
@@ -47,7 +48,7 @@ const CitizenLayout = () => {
           </h1>
 
           {/* RIGHT NAV */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 flex-wrap">
 
             <NavLink
               to="/citizen/dashboard"
@@ -70,11 +71,11 @@ const CitizenLayout = () => {
               Help
             </NavLink>
 
-            {/* SEARCH */}
+            
             <input
               type="text"
               placeholder="Search"
-              className="px-4 py-1.5 rounded-full text-sm outline-none"
+             className="hidden md:block px-4 py-1.5 rounded-full text-sm outline-none"
             />
 
             {/* LOGOUT */}
