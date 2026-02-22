@@ -34,7 +34,7 @@ export const createComplaintWithProof = async (req, res) => {
   const { citizen_id, title, description, category } = req.body;
 
   try {
-    const proofPath = req.file ? req.file.path : null;
+    const proofPath = req.file ? req.file.path.replace(/\\/g, '/') : null;
     const complaintCode = 'CRP' + Date.now();
 
     await db.promise().query(
@@ -65,6 +65,7 @@ export const getAllComplaints = async (req, res) => {
           c.id,
           c.complaint_code,
           c.title,
+           c.description, 
           c.category,
           c.status,
           c.proof,
