@@ -63,10 +63,9 @@ const CitizenDashboard = () => {
 
     
       <section className="max-w-7xl mx-auto px-4 md:px-6 mt-10">   
-        <div className="bg-white rounded-2xl shadow p-6 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between border-l-8 border-blue-500">   
-
+     <div  className="bg-white rounded-2xl shadow p-5 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between border-l-8 border-blue-500">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-3 break-words"> 
+            <h2 className="text-2xl md:text-4xl font-bold mb-3 break-words"> 
               Welcome, {user.name}!
             </h2>
 

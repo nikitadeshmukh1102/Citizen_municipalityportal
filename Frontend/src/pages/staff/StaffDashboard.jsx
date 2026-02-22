@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import AllComplaints from './AllComplaints';
 import { useAuth } from '../../context/AuthContext';
 
-// ✅ assets
+
 import heroImg from '../../assets/dashboards/staff/staff-hero.png';
 import searchIcon from '../../assets/icons/search.svg';
 
@@ -24,10 +24,10 @@ const StaffDashboard = () => {
   return (
     <div className="bg-[#f6f8fb] min-h-screen relative">
 
-      {/* ✅ FLOATING TOP POPUP */}
+      
       {showPasswordPopup && (
-        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-4">   {/* ✅ MOBILE SAFE */}
-          <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] w-full max-w-[520px] overflow-hidden">   {/* ✅ WIDTH SAFE */}
+        <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-4">   
+          <div className="bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.25)] w-full max-w-[520px] overflow-hidden">  
 
             <div className="bg-[#f7f9fc] px-6 py-4 border-b">
               <h3 className="text-lg font-semibold">
@@ -36,12 +36,12 @@ const StaffDashboard = () => {
             </div>
 
             <div className="px-6 py-5">
-              <p className="text-sm text-gray-600 mb-6 break-words">   {/* ✅ TEXT SAFE */}
+              <p className="text-sm text-gray-600 mb-6 break-words">   
                 The password you just used was found in a data breach.
                 For security reasons, please change your password now.
               </p>
 
-              <div className="flex flex-col sm:flex-row justify-end gap-3">   {/* ✅ STACK SAFE */}
+              <div className="flex flex-col sm:flex-row justify-end gap-3">  
                 <button
                   onClick={() => setShowPasswordPopup(false)}
                   className="px-5 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-sm w-full sm:w-auto"
@@ -61,16 +61,15 @@ const StaffDashboard = () => {
         </div>
       )}
 
-      {/* HERO */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-10">   {/* ✅ RESPONSIVE PADDING */}
-        <div className="bg-white rounded-2xl shadow p-6 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between border-l-8 border-blue-600">   {/* ✅ FLEX SAFE */}
+      <section className="max-w-7xl mx-auto px-4 md:px-6 pt-10">  
+        <div className="bg-white rounded-2xl shadow p-5 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between border-l-8 border-blue-600">   {/* ✅ FLEX SAFE */}
 
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-3 break-words">   {/* ✅ TEXT SAFE */}
+            <h2 className="text-xl md:text-3xl font-bold mb-3 break-words">   
               Staff Dashboard
             </h2>
 
-            <p className="text-gray-700 mb-1 break-words">
+            <p className="text-gray-600 text-sm md:text-base mb-1 break-words">
               Welcome, <span className="font-semibold">{user?.name}</span>!
               Here are the complaints assigned to you.
             </p>
@@ -79,7 +78,7 @@ const StaffDashboard = () => {
               Manage and update them as needed.
             </p>
 
-            <div className="bg-yellow-50 border border-yellow-200 rounded-xl px-4 py-3 w-full sm:w-fit">   {/* ✅ WIDTH SAFE */}
+            <div className="bg-yellow-50 border border-yellow-200 rounded-xl px-4 py-2.5 w-full sm:w-fit">  
               <p className="text-sm text-yellow-800 break-words">
                 <span className="font-semibold">Tip:</span> Click on "Update" to change status and add remarks to a complaint.
               </p>
@@ -94,10 +93,10 @@ const StaffDashboard = () => {
         </div>
       </section>
 
-      {/* FILTER BAR */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 mt-10">   {/* ✅ RESPONSIVE PADDING */}
+      
+      <section className="max-w-7xl mx-auto px-4 md:px-6 mt-10">  
 
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">   {/* ✅ STACK SAFE */}
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-3 mb-5">   
 
           <div>
             <h3 className="text-2xl font-bold">
@@ -109,12 +108,12 @@ const StaffDashboard = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3">   {/* ✅ MOBILE SAFE */}
+          <div className="flex flex-col sm:flex-row gap-3">   
 
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="border rounded-xl px-4 py-2 text-sm shadow-sm w-full sm:w-auto"
+             className="border rounded-xl px-4 py-2 text-sm shadow-sm w-full sm:w-auto"
             >
               <option value="ALL">Filter by Status: All</option>
               <option value="PENDING">Pending</option>
@@ -135,7 +134,7 @@ const StaffDashboard = () => {
               <option value="SANITATION">Sanitation</option>
             </select>
 
-            <div className="relative w-full sm:w-auto">   {/* ✅ SEARCH SAFE */}
+            <div className="relative w-full sm:w-auto">   
               <img
                 src={searchIcon}
                 className="absolute left-3 top-3 w-4 opacity-60"

@@ -11,18 +11,18 @@ const Landing = () => {
 
       {/* ================= HERO SECTION ================= */}
       <section
-        className="relative w-full min-h-[680px] bg-no-repeat bg-top bg-cover"
+        className="relative w-full min-h-[680px] bg-no-repeat bg-center md:bg-top bg-cover"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/50 to-transparent"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-40 grid md:grid-cols-2 gap-10 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pt-20 md:pt-32 pb-24 md:pb-40 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
               Citizen Resolution Platform
             </h1>
 
-            <p className="mt-4 text-lg text-blue-100 max-w-xl">
+            <p className="mt-4 text-sm md:text-lg text-blue-100 max-w-xl">
               A transparent and role-based complaint management system
               where citizens raise issues, staff resolve them,
               and admins monitor everything in real time.
@@ -31,14 +31,14 @@ const Landing = () => {
             <div className="mt-8 flex gap-4">
               <Link
                 to="/login"
-                className="px-6 py-3 rounded-xl bg-yellow-400 text-blue-900 font-semibold shadow hover:bg-yellow-300 transition"
+              className="px-5 py-2.5 text-sm md:px-6 md:py-3 md:text-base rounded-xl bg-yellow-400 text-blue-900 font-semibold shadow hover:bg-yellow-300 transition"
               >
                 Raise a Complaint
               </Link>
 
               <Link
                 to="/login"
-                className="px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow hover:bg-blue-500 transition"
+                className="px-5 py-2.5 text-sm md:px-6 md:py-3 md:text-base rounded-xl bg-blue-600 text-white font-semibold shadow hover:bg-blue-500 transition"
               >
                 Track Complaint
               </Link>

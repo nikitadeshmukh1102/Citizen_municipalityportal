@@ -15,22 +15,26 @@ import staffImportRoutes from './routes/staffImport.routes.js';
 
 import passwordResetRoutes from './routes/passwordReset.routes.js';
 
-/* ✅ CRITICAL FIX — FORCE ENV PATH */
+
 dotenv.config({ path: path.resolve('./.env') });
 
 const app = express();
 
-/* =========================
+/* 
    MIDDLEWARES
-   ========================= */
-app.use(cors());
+ */
+app.use(cors({
+  origin: '*',
+  methods: ['GET','POST','PUT','DELETE'],
+  allowedHeaders: ['Content-Type','Authorization']
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static('uploads'));
 
-/* =========================
+/*
    ROUTES
-   ========================= */
+  */
 
 // AUTH
 app.use('/api/auth', authRoutes);
@@ -54,7 +58,6 @@ app.use('/api/help', helpRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/admin', staffImportRoutes);
 
-/* ========================= */
 app.get('/', (req, res) => {
   res.send('CRP Backend is running');
 });

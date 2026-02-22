@@ -14,7 +14,8 @@ const StaffLayout = () => {
       <header className="sticky top-0 z-50 bg-gradient-to-r from-green-100 to-green-200">
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
+
             <img src={logo} alt="Logo" className="w-8 h-8" />
             <span className="text-sm font-medium text-slate-700">
               Citizen Complaints Management System
@@ -37,8 +38,7 @@ const StaffLayout = () => {
             Staff Resolution Panel
           </h1>
 
-          <div className="flex items-center gap-4">
-
+          <div className="flex items-center gap-3 flex-wrap">
             <NavLink
               to="/staff/dashboard"
               className="px-4 py-1.5 rounded-full text-sm text-white bg-white/20 hover:bg-white/30 transition"
