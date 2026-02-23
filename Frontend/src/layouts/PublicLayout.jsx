@@ -10,11 +10,11 @@ const PublicLayout = () => {
     <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
 
       <header className="sticky top-0 z-50 backdrop-blur-lg bg-white/70 dark:bg-gray-900/70 border-b border-white/40 dark:border-gray-700 shadow-sm">
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+<div className="container mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
 
-          <div className="flex items-center gap-3">
+         <div className="flex items-center gap-2 md:gap-3">
             <img src={logo} alt="CRP Logo" className="h-9" />
-            <span className="text-xl font-semibold text-gray-800 dark:text-white">
+          <span className="text-sm md:text-xl font-semibold text-gray-800 dark:text-white">
               Citizen Resolution Platform
             </span>
           </div>
@@ -34,7 +34,7 @@ const PublicLayout = () => {
 
           {/* ✅ ADD ONLY */}
           <button
-            className="md:hidden text-2xl text-gray-700 dark:text-gray-200"
+          className="md:hidden text-xl px-2 text-gray-700 dark:text-gray-200"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             ☰
@@ -44,7 +44,7 @@ const PublicLayout = () => {
 
         {/* ✅ ADD ONLY */}
         {menuOpen && (
-          <div className="md:hidden px-6 pb-4 flex flex-col gap-3 text-gray-700 dark:text-gray-200 font-medium bg-white dark:bg-gray-900">
+          <div className="md:hidden px-4 pb-4 pt-2 flex flex-col gap-2 text-sm text-gray-700 dark:text-gray-200 font-medium bg-white dark:bg-gray-900">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/help">Help</Link>

@@ -5,7 +5,7 @@ import bgImg from '../../assets/landing/bg/grass.png'; // ✅ Existing asset
 const Help = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-bottom flex items-center justify-center px-6 py-16"
+     className="min-h-screen bg-cover bg-bottom flex items-center justify-center px-4 md:px-6 py-10 md:py-16"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       {/* ✅ MAIN GLASS CARD */}
@@ -14,7 +14,7 @@ const Help = () => {
         bg-white/80 backdrop-blur-xl
         rounded-3xl
         shadow-[0_25px_70px_rgba(0,0,0,0.18)]
-        p-12
+       p-5 md:p-12
       ">
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -22,11 +22,11 @@ const Help = () => {
           {/* ✅ LEFT CONTENT */}
           <div>
 
-            <h1 className="text-4xl font-bold mb-4 text-gray-800">
+            <h1 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4 text-gray-800">
               Help & Support
             </h1>
 
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-600 mb-5 md:mb-8 leading-relaxed">
               Need assistance with complaints, login, or tracking status?
               Our support team is here to help you.
             </p>
@@ -35,15 +35,15 @@ const Help = () => {
             <div className="space-y-4">
 
               <div className="
-                bg-white
-                border
-                rounded-xl
-                px-5 py-4
-                shadow-sm
+                bg-white/90
+border border-gray-100
+rounded-2xl
+px-4 py-3 md:px-5 md:py-4
+shadow-[0_8px_25px_rgba(0,0,0,0.06)]
               ">
-                <p className="text-sm text-gray-700">
+                <p className="text-xs md:text-sm text-gray-700">
                   <span className="font-semibold">📧 Email:</span><br />
-                  nikita.support@gov.in
+                 citizenportal1124@gmail.com
                 </p>
               </div>
 
@@ -61,11 +61,11 @@ const Help = () => {
               </div>
 
               <div className="
-                bg-white
-                border
-                rounded-xl
-                px-5 py-4
-                shadow-sm
+bg-white/90
+border border-gray-100
+rounded-2xl
+px-4 py-3 md:px-5 md:py-4
+shadow-[0_8px_25px_rgba(0,0,0,0.06)]
               ">
                 <p className="text-sm text-gray-700">
                   <span className="font-semibold">🕘 Working Hours:</span><br />
@@ -87,16 +87,16 @@ const Help = () => {
 
             <div className="
               bg-gradient-to-br from-blue-50 to-white
-              rounded-2xl
-              p-6
+              rounded-3xl
+            p-4 md:p-6
               shadow-[0_10px_35px_rgba(0,0,0,0.12)]
-              hover:scale-105
+                md:hover:scale-105
               transition
             ">
               <img
                 src={helpImg}
                 alt="Help Support"
-                className="w-[340px] md:w-[380px]"
+               className="w-[220px] md:w-[380px]"
               />
             </div>
 

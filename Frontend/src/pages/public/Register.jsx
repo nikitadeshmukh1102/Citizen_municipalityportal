@@ -109,11 +109,11 @@ const Register = () => {
           </div>
 
           {/* RIGHT FORM */}
-          <div className="p-10">
-            <h2 className="text-3xl font-bold text-gray-800 mb-2">
+         <div className="p-6 md:p-10">
+        <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-2">
               Create a New Account
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-xs md:text-base text-gray-600 mb-5 md:mb-6">
               Please fill in the form below to register.
             </p>
 

@@ -65,21 +65,24 @@ const AdminDashboard = () => {
   };
 
   if (loading) return <Loader />;
+  console.log("PROOF →", selectedComplaint?.proof);
 
  return (
+  
+
   <div className="min-h-screen flex flex-col px-4 md:px-0">
 
-      {/* HERO */}
-      <div className="bg-white rounded-3xl shadow-sm p-6 md:p-10 mb-10 border border-gray-100">
+      
+      <div className="bg-white rounded-3xl shadow-sm p-5 md:p-10 mb-8 border border-gray-100">
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
 
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold mb-3 text-gray-800">
+            <h1 className="text-xl md:text-3xl font-bold mb-3 text-gray-800">
               Admin Dashboard
             </h1>
 
-            <p className="text-gray-500 mb-6">
+            <p className="text-gray-400 text-sm md:text-base mb-6">
               Welcome, Administrator! Here you can manage and monitor all citizen complaints.
             </p>
 
@@ -97,7 +100,7 @@ const AdminDashboard = () => {
         </div>
       </div>
 
-      {/* TABLE */}
+      
       <div className="bg-white rounded-3xl shadow-sm p-5 md:p-8 border border-gray-100">
 
         <div className="flex flex-col md:flex-row justify-between gap-4 mb-8">
@@ -111,7 +114,7 @@ const AdminDashboard = () => {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="border rounded-xl px-4 py-2 text-sm bg-gray-50 w-full md:w-auto"
+             className="border rounded-xl px-3 py-2 text-sm bg-gray-50 w-full md:w-auto"
             >
               <option value="ALL">All Status</option>
               <option value="PENDING">Pending</option>
@@ -124,7 +127,7 @@ const AdminDashboard = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search complaints"
-              className="border rounded-xl px-4 py-2 text-sm bg-gray-50 w-full md:w-[220px]"
+             className="border rounded-xl px-3 py-2 text-sm bg-gray-50 w-full md:w-[220px]"
             />
 
           </div>
@@ -239,14 +242,15 @@ const AdminDashboard = () => {
               {selectedComplaint.description && (
                 <p><b>Description:</b> {selectedComplaint.description}</p>
               )}
-
-              {selectedComplaint.proof && (
-                <img
-                  src={`http://localhost:5000/${selectedComplaint.proof}`}
-                  className="mt-4 rounded-xl border"
-                />
-              )}
-
+{selectedComplaint.proof && (
+  <img
+    src={
+      "https://citizenmunicipalityportal-production.up.railway.app/" +
+      selectedComplaint.proof.replace(/\\/g, '/')
+    }
+    className="mt-4 rounded-xl border"
+  />
+)}
             </div>
           </div>
         </div>
@@ -263,9 +267,9 @@ const AdminDashboard = () => {
 
 
 const StatCard = ({ title, value, color }) => (
-  <div className={`bg-gradient-to-r ${color} text-white px-5 py-3 rounded-2xl w-full sm:w-[180px] shadow-sm`}>
+  <div className={`bg-gradient-to-r ${color} text-white px-4 py-2.5 rounded-2xl w-full sm:w-[180px] shadow-sm`}>
     <p className="text-xs opacity-90">{title}</p>
-    <p className="text-2xl font-bold">{value}</p>
+    <p className="text-xl md:text-2xl font-bold">{value}</p>
   </div>
 );
 

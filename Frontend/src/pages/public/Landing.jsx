@@ -18,7 +18,7 @@ const Landing = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pt-20 md:pt-32 pb-24 md:pb-40 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            <h1 className="text-2xl md:text-5xl font-extrabold text-white leading-tight">
               Citizen Resolution Platform
             </h1>
 
@@ -28,7 +28,7 @@ const Landing = () => {
               and admins monitor everything in real time.
             </p>
 
-            <div className="mt-8 flex gap-4">
+          <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <Link
                 to="/login"
               className="px-5 py-2.5 text-sm md:px-6 md:py-3 md:text-base rounded-xl bg-yellow-400 text-blue-900 font-semibold shadow hover:bg-yellow-300 transition"
