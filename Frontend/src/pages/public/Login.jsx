@@ -101,23 +101,43 @@ const Login = () => {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
 
-      <div className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.15)] overflow-hidden flex max-w-4xl w-full">
+     <div className="
+flex 
+flex-col 
+md:flex-row 
+w-full 
+max-w-5xl 
+items-center 
+justify-center 
+gap-10
+">
 
-        <div className="hidden md:flex md:w-1/2 items-center justify-center p-10">
-          <img 
-            src={loginImg} 
-            alt="Login" 
-            className="w-full max-w-sm" 
-          />
-        </div>
+  {/* IMAGE */}
+  <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
+    <img 
+      src={loginImg} 
+      alt="Login" 
+      className="w-60 md:w-full max-w-sm drop-shadow-xl"
+    />
+  </div>
 
-        <div className="w-full md:w-1/2 p-10">
-
-          <h2 className="text-3xl font-bold mb-2 text-gray-800">
+  <div className="
+w-[92%]
+md:w-1/2 
+bg-white/90
+backdrop-blur-lg
+rounded-2xl
+shadow-xl
+p-6 
+md:p-10
+mx-auto
+mt-2
+">
+         <h2 className="text-xl md:text-3xl font-bold mb-2 text-gray-800">
             Welcome Back
           </h2>
 
-          <p className="text-gray-600 mb-6">
+          <p className="text-xs md:text-base text-gray-600 mb-5 md:mb-6">
             Login to continue to your dashboard
           </p>
 

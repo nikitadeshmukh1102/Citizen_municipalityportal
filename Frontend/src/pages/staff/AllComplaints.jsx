@@ -34,7 +34,7 @@ const AllComplaints = ({ statusFilter, departmentFilter, search }) => {
 
       {!loading && filteredComplaints.length > 0 && (
 
-        /* ✅ ONLY ADDITION (Mobile Scroll Safety) */
+      
         <div className="overflow-x-auto">
 
           <table className="w-full text-sm">
@@ -75,15 +75,15 @@ const AllComplaints = ({ statusFilter, departmentFilter, search }) => {
 
                   <td className="px-6 py-4">
                     {c.proof ? (
-                      <a
-                        href={`http://localhost:5000/${c.proof}`}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-blue-600 hover:underline"
-                      >
-                        View
-                      </a>
-                    ) : '-'}
+  <a
+    href={`https://citizenmunicipalityportal-production.up.railway.app/${c.proof.replace(/\\/g, '/')}`}
+    target="_blank"
+    rel="noreferrer"
+    className="text-blue-600 hover:underline"
+  >
+    View
+  </a>
+) : '-'}
                   </td>
 
                   <td className="px-6 py-4 text-xs">

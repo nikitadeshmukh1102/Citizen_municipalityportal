@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink, Link } from "react-router-dom";
 import { useState } from "react";   // ✅ ADD ONLY
 import logo from "../assets/common/logo.png";
 
@@ -44,12 +44,84 @@ const PublicLayout = () => {
 
         {/* ✅ ADD ONLY */}
         {menuOpen && (
-          <div className="md:hidden px-4 pb-4 pt-2 flex flex-col gap-2 text-sm text-gray-700 dark:text-gray-200 font-medium bg-white dark:bg-gray-900">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/help">Help</Link>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+          <div className="
+md:hidden
+mx-3 mb-3
+px-4 py-3
+flex flex-col gap-3
+text-sm font-medium
+
+bg-white/80 dark:bg-gray-900/80
+backdrop-blur-xl
+
+rounded-2xl
+shadow-[0_10px_30px_rgba(0,0,0,0.08)]
+border border-white/40 dark:border-gray-700
+">
+         <NavLink
+  to="/"
+  className={({ isActive }) =>
+    `px-3 py-2 rounded-lg transition-all duration-200 active:scale-95 ${
+      isActive
+        ? "bg-blue-600 text-white shadow-md"
+        : "hover:bg-blue-50 dark:hover:bg-gray-800"
+    }`
+  }
+>
+  Home
+</NavLink>
+
+<NavLink
+  to="/about"
+  className={({ isActive }) =>
+    `px-3 py-2 rounded-lg transition-all duration-200 active:scale-95${
+      isActive
+        ? "bg-blue-600 text-white shadow-md"
+        : "hover:bg-blue-50 dark:hover:bg-gray-800"
+    }`
+  }
+>
+  About
+</NavLink>
+
+<NavLink
+  to="/help"
+  className={({ isActive }) =>
+    `px-3 py-2 rounded-lg transition-all duration-200 active:scale-95 ${
+      isActive
+        ? "bg-blue-600 text-white shadow-md"
+        : "hover:bg-blue-50 dark:hover:bg-gray-800"
+    }`
+  }
+>
+  Help
+</NavLink>
+
+<NavLink
+  to="/login"
+  className={({ isActive }) =>
+    `px-3 py-2 rounded-lg transition-all duration-200 active:scale-95 ${
+      isActive
+        ? "bg-blue-600 text-white shadow-md"
+        : "hover:bg-blue-50 dark:hover:bg-gray-800"
+    }`
+  }
+>
+  Login
+</NavLink>
+
+<NavLink
+  to="/register"
+  className={({ isActive }) =>
+    `px-3 py-2 rounded-lg transition-all duration-200 active:scale-95${
+      isActive
+        ? "bg-blue-600 text-white shadow-md"
+        : "hover:bg-blue-50 dark:hover:bg-gray-800"
+    }`
+  }
+>
+  Register
+</NavLink>
           </div>
         )}
 

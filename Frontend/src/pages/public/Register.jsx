@@ -104,7 +104,7 @@ const Register = () => {
         <div className="relative max-w-5xl w-full rounded-3xl bg-white/70 backdrop-blur-xl shadow-[0_30px_80px_rgba(0,0,0,0.15)] overflow-hidden grid md:grid-cols-2">
 
           {/* LEFT IMAGE */}
-          <div className="hidden md:flex items-center justify-center p-10">
+         <div className="flex items-center justify-center p-6 md:p-10">
             <img src={registerImg} alt="Register" className="w-full max-w-sm" />
           </div>
 

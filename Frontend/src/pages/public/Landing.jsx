@@ -10,19 +10,50 @@ const Landing = () => {
     <div className="w-full overflow-hidden bg-white dark:bg-gray-900 text-slate-800 dark:text-white">
 
       {/* ================= HERO SECTION ================= */}
-      <section
-        className="relative w-full min-h-[680px] bg-no-repeat bg-center md:bg-top bg-cover"
+   <section
+ className="
+  hero-section   
+  relative w-full
+
+  min-h-[520px]
+  sm:min-h-[560px]
+  md:min-h-[680px]
+
+  bg-no-repeat
+  bg-cover
+
+  bg-[center_top]
+  sm:bg-center
+  md:bg-top
+"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 via-blue-800/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-800/75 via-blue-900/75to-transparent"></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 pt-20 md:pt-32 pb-24 md:pb-40 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
-          <div>
-            <h1 className="text-2xl md:text-5xl font-extrabold text-white leading-tight">
-              Citizen Resolution Platform
+    <div className="
+  hero-content  
+  relative z-10
+  max-w-7xl mx-auto
+
+  px-5 md:px-6
+  pt-28 sm:pt-32 md:pt-32
+  pb-28 md:pb-40
+
+  grid md:grid-cols-2
+  gap-8 md:gap-10
+  items-center
+">
+         <div className="animate-fade-in-up">
+           <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white leading-tight">
             </h1>
 
-            <p className="mt-4 text-sm md:text-lg text-blue-100 max-w-xl">
+        <p className="
+  mt-4
+  text-[14px] sm:text-base md:text-lg
+  leading-relaxed
+  text-blue-100
+  max-w-xl
+">
               A transparent and role-based complaint management system
               where citizens raise issues, staff resolve them,
               and admins monitor everything in real time.
@@ -31,14 +62,43 @@ const Landing = () => {
           <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4">
               <Link
                 to="/login"
-              className="px-5 py-2.5 text-sm md:px-6 md:py-3 md:text-base rounded-xl bg-yellow-400 text-blue-900 font-semibold shadow hover:bg-yellow-300 transition"
-              >
+             className="
+               hero-btn 
+  px-6 py-3
+  text-sm md:text-base
+
+  rounded-xl
+  bg-blue-600 text-white
+  font-semibold
+
+  shadow-lg
+  transition-all duration-300
+
+  hover:scale-[1.03]
+  hover:shadow-xl
+  active:scale-95
+">
                 Raise a Complaint
               </Link>
 
               <Link
                 to="/login"
-                className="px-5 py-2.5 text-sm md:px-6 md:py-3 md:text-base rounded-xl bg-blue-600 text-white font-semibold shadow hover:bg-blue-500 transition"
+                className="
+                  hero-btn 
+  px-6 py-3
+  text-sm md:text-base
+
+  rounded-xl
+  bg-blue-600 text-white
+  font-semibold
+
+  shadow-lg
+  transition-all duration-300
+
+  hover:scale-[1.03]
+  hover:shadow-xl
+  active:scale-95
+"
               >
                 Track Complaint
               </Link>
@@ -51,11 +111,11 @@ const Landing = () => {
 
       {/* ================= HOW IT WORKS ================= */}
       <section className="-mt-32 relative z-20 max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-10">
-          How It Works
-        </h2>
+       <h2 className="text-3xl font-bold text-center mb-10">
+  How It Works
+</h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {[
             "Citizen registers and logs in",
             "Complaint is submitted with proof",
@@ -65,17 +125,28 @@ const Landing = () => {
             "Admin monitors entire system"
           ].map((text, i) => (
             <div
-              key={i}
-              className={`
-                bg-gradient-to-b from-white dark:from-gray-800 to-blue-50 dark:to-gray-900
-                rounded-xl p-6
-                border border-blue-100 dark:border-gray-700
-                shadow-[0_10px_20px_rgba(0,0,0,0.08)]
-                transition-all duration-300
-                hover:-translate-y-1
-                ${i % 2 === 0 ? "rotate-[0.25deg]" : "-rotate-[0.25deg]"}
-              `}
-            >
+           
+  key={i}
+  className={`
+    bg-gradient-to-b
+    from-white dark:from-gray-800
+    to-blue-50 dark:to-gray-900
+
+    rounded-xl
+    p-5 md:p-6
+
+    border border-blue-100 dark:border-gray-700
+
+    shadow-md
+    transition-all duration-300
+
+    hover:-translate-y-1
+    hover:shadow-lg
+    active:scale-[0.98]
+
+    ${i % 2 === 0 ? "rotate-[0.2deg]" : "-rotate-[0.2deg]"}
+  `}
+>
               <div className="flex items-center gap-3 mb-2">
                 <span className="w-8 h-8 rounded-full bg-blue-600 text-white text-sm font-bold flex items-center justify-center">
                   {i + 1}
@@ -87,6 +158,8 @@ const Landing = () => {
             </div>
           ))}
         </div>
+        
+
       </section>
 
       {/* ================= USER ROLES ================= */}
@@ -95,7 +168,7 @@ const Landing = () => {
           User Roles
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {[
             { icon: citizenIcon, title: "Citizen", color: "from-green-400", desc: "Register, raise complaints, upload proof, and track complaint status in real time." },
             { icon: staffIcon, title: "Staff", color: "from-yellow-400", desc: "View complaints, assign departments, update status, and add remarks." },
@@ -108,9 +181,11 @@ const Landing = () => {
                 bg-gradient-to-b ${r.color} to-white dark:to-gray-900
                 p-6 text-center
                 border border-slate-100 dark:border-gray-700
-                shadow-[0_12px_24px_rgba(0,0,0,0.1)]
-                transition-all duration-300
-                hover:-translate-y-1
+               shadow-lg hover:shadow-xl
+transition-all duration-300
+hover:-translate-y-1
+active:scale-[0.98]
+                
               `}
             >
               <img src={r.icon} className="w-14 mx-auto mb-4" />
@@ -129,7 +204,13 @@ const Landing = () => {
       <section className="relative mt-24 py-24 overflow-hidden">
 
         <div
-          className="absolute inset-0 bg-bottom bg-no-repeat bg-cover opacity-40 pointer-events-none"
+  className="
+    absolute inset-0
+    bg-bottom bg-no-repeat bg-cover
+    opacity-50
+    pointer-events-none
+    scale-110
+  "
           style={{
             backgroundImage: `url(${grassBg})`,
             maskImage:

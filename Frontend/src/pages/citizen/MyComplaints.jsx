@@ -75,17 +75,17 @@ const MyComplaints = () => {
               </p>
 
               {c.proof && (
-                <div className="mt-2">
-                  <a
-                    href={`http://localhost:5000/${c.proof}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-sm text-blue-600 underline break-all"   
-                  >
-                    View Proof
-                  </a>
-                </div>
-              )}
+  <div className="mt-2">
+    <a
+      href={`https://citizenmunicipalityportal-production.up.railway.app/${c.proof.replace(/\\/g, '/')}`}
+      target="_blank"
+      rel="noreferrer"
+      className="text-sm text-blue-600 underline break-all"
+    >
+      View Proof
+    </a>
+  </div>
+)}
             </div>
           ))}
         </div>
