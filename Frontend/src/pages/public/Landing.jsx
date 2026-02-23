@@ -28,7 +28,7 @@ const Landing = () => {
 "
         style={{ backgroundImage: `url(${heroImg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-800/75 via-blue-900/75to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-800/75 via-blue-900/75 to-transparent"></div>
 
     <div className="
   hero-content  
@@ -45,7 +45,8 @@ const Landing = () => {
 ">
          <div className="animate-fade-in-up">
            <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-white leading-tight">
-            </h1>
+  Citizen Resolution Platform
+</h1>
 
         <p className="
   mt-4
@@ -68,7 +69,7 @@ const Landing = () => {
   text-sm md:text-base
 
   rounded-xl
-  bg-blue-600 text-white
+ bg-yellow-400 text-black hover:bg-yellow-500
   font-semibold
 
   shadow-lg
@@ -201,15 +202,15 @@ active:scale-[0.98]
       </section>
 
       {/* ================= KEY FEATURES ================= */}
-      <section className="relative mt-24 py-24 overflow-hidden">
+      <section className="relative mt-24 py-24 overflow-hidden min-h-[520px] md:min-h-0">
 
         <div
   className="
     absolute inset-0
-    bg-bottom bg-no-repeat bg-cover
-    opacity-50
+   bg-no-repeat bg-bottom bg-contain md:bg-cover
+    opacity-65
     pointer-events-none
-    scale-110
+    scale-100
   "
           style={{
             backgroundImage: `url(${grassBg})`,
